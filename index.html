@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Checker</h1>
+        <p class="description">Check your password strength and get suggestions for improvement</p>
+        
+        <div class="form-group">
+            <label for="password">Enter your password:</label>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Type your password here" autocomplete="new-password">
+                <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility" title="Toggle password visibility"></button>
+            </div>
+            <div class="strength-meter">
+                <div class="strength-meter-fill" id="strengthMeter"></div>
+            </div>
+            <p class="strength-text" id="strengthText">Password not entered</p>
+        </div>
+        
+        <div class="suggestion">
+            <h3>Suggested Strong Password:</h3>
+            <p class="suggestion-password" id="suggestedPassword">Waiting for input...</p>
+            <p>This password includes uppercase, lowercase, numbers, and special characters.</p>
+        </div>
+        
+        <div class="criteria">
+            <h3>Password must meet the following criteria:</h3>
+            <ul class="criteria-list">
+                <li><span id="lengthIcon">❌</span> At least 12 characters long</li>
+                <li><span id="uppercaseIcon">❌</span> Contains uppercase letters (A-Z)</li>
+                <li><span id="lowercaseIcon">❌</span> Contains lowercase letters (a-z)</li>
+                <li><span id="numberIcon">❌</span> Contains numbers (0-9)</li>
+                <li><span id="specialIcon">❌</span> Contains special characters (!@#$%^&* etc.)</li>
+            </ul>
+        </div>
+        
+        <button class="btn" id="generatePassword">Generate Strong Password</button>
+        
+        <p class="footer">This tool evaluates your password locally in your browser. Your password is not sent to any server.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
